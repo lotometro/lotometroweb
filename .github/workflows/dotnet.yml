@@ -26,7 +26,7 @@ jobs:
       - name: Test
         run: dotnet test --no-build --verbosity normal
       - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: Samkirkland/FTP-Deploy-Action@4.0.0
         with:
           server: win8016.site4now.net
           username: lotometro-001
