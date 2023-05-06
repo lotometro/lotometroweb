@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="jumbotron">
+    <h2>Bem vindo! Faça login ou cadastre-se</h2>
+    <br />
+    <form action="/principal/principal" method="post">
+
+        <div class="form-group">
+            <label for="Usuario" class="text-center">Login</label>
+            <input type="text" Name="Usuario" value="@ViewBag.Usuario" placeholder="Digite seu login" class="form-control" />
+            <span asp-validation-for="Usuario" class="text-danger"></span>
+            <span class="text-danger"> @ViewBag.Erro</span>
+            <br />
+        </div>
+
+        <div class="form-group">
+            <label for="Senha" class="text-center">Senha</label>
+            <input type="password" Name="Senha" value="@ViewBag.Senha" placeholder="Digite sua Senha" class="form-control" />
+            <span asp-validation-for="Senha" class="text-danger"></span>
+            <br />
+        </div>
+
+        <!--<input type="submit"  class="btn btn-default btn-lg">-->
+        <p class="btn btn-default btn-lg"> @Html.ActionLink("Fazer Login", "Principal", "Principal")&raquo;</p>
+
+        <br />
+    </form>
+
+    <form action="/conta/criarnovaconta">
+        <br />
+
+        <input type="submit" value="Cadastrar-se" class="btn btn-default btn-lg" />
+        <br />
+        <br />
+
+    </form>
+
+</div>
+
