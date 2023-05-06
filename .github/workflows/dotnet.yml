@@ -13,5 +13,5 @@ jobs:
         uses: Samkirkland/FTP-Deploy-Action@4.0.0
         with:
           server: win8016.site4now.net
-          username: lotometro
-          password: ${{ secrets.ftp_password }}
+          username: lotometro-001
+          password: Lotometroec08*
